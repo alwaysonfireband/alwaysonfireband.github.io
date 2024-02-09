@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔥 Always On Fire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      body {
+          font-family: 'Manrope', sans-serif;
+      }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body>
 
 <!-- Fixed Top Bar -->
 <div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center">
@@ -15,24 +21,33 @@
 </div>
 
 <!-- Content to show scrolling effect -->
-<section class="relative bg-gray-900 flex flex-col justify-center items-center overflow-hidden">
+<section class="relative bg-gray-900 flex justify-center items-center overflow-hidden">
     <img src="assets/images/aof-band-wide.jpg" alt="Band Image" class="max-w-full mx-auto">
-    <div class="z-10 text-center absolute">
-        <h1 class="text-6xl font-bold mb-4 text-white">Always On Fire</h1>
-        <p class="text-xl text-white">Website coming soon!</p>
+    <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+
+    <div class="z-10 text-center absolute bottom-10">
+        <h1 class="hidden md:block text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-4 text-white">Always On Fire</h1>
+        <p class="text-xl text-white">Your musical journey through the ages</p>
     </div>
 </section>
 
-
-
-<!--
-<section class="bg-cover bg-center h-screen bg-gray-800" style="background-image: url('assets/images/aof-band-wide.jpg');">
-    <div class="bg-black bg-opacity-50 flex flex-col justify-center items-center h-full">
-        <h1 class="text-6xl font-bold mb-4 text-white">Always On Fire</h1>
-        <p class="text-xl text-white">Website coming soon!</p>
+<!-- New Section with Adjustments -->
+<section class="bg-gray-200 text-gray-800 py-12">
+    <div class="container mx-auto px-4 max-w-[1200px]">
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            From the iconic riffs of Queen to the rebellious beats of Muse, from the unmistakable groove of ZZ Top to the soulful melodies of Joe Walsh - "Always on Fire" is your musical time machine to classic rock's golden age.
+        </p>
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            Consisting of five passionate musicians from Chicago, IL, our ensemble brings together a symphony of sounds, echoing the sentiments of yesteryears while infusing our unique touch. We are not just a band; we're a bridge that connects generations of rock enthusiasts.<br>
+        </p>
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            With each performance, we aim to capture the essence of classic rock, transporting audiences to a time where music wasn't just heard; it was felt. Our sets promise not only a trip down memory lane but a live experience that resonates with both seasoned classic rock aficionados and new fans alike.
+        </p>
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            Join us on this sonic journey, as we pay homage to legends of rock, celebrating their legacy with every chord and chorus.
+        </p>
     </div>
 </section>
--->
 
 </body>
 </html>
