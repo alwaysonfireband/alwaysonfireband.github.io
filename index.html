@@ -1,8 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Always on Fire Band</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Top Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>We are AlwaysOnFire!</h1>
+<body class="bg-gray-100">
+
+<!-- Fixed Top Bar -->
+<div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center">
+   <img src="assets/images/aof-logo.png" alt="Band Logo" class="h-12 pl-8 object-contain">
+   <span class="text-white uppercase pl-4 text-lg font-bold">Always On Fire</span>
+</div>
+
+<!-- Content to show scrolling effect -->
+<section class="bg-cover bg-center h-screen bg-gray-800" style="background-image: url('assets/images/aof-band-wide.jpg');">
+    <div class="bg-black bg-opacity-50 flex flex-col justify-center items-center h-full">
+        <h1 class="text-6xl font-bold mb-4 text-white">Always On Fire</h1>
+        <p class="text-xl text-white">Website coming soon!</p>
+    </div>
+</section>
+
+
 </body>
 </html>
