@@ -19,13 +19,18 @@
 <body>
 
 <!-- Fixed Top Bar -->
-<div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center justify-between">
-   <div class="flex items-center">
-       <img src="assets/images/aof-logo.png" alt="Band Logo" class="h-12 pl-8 object-contain">
-       <span class="text-white uppercase pl-4 text-lg font-bold">Always On Fire</span>
-   </div>
+<div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center justify-between px-4">
+    <div class="flex items-center">
+        <img src="assets/images/aof-logo.png" alt="Band Logo" class="h-12 object-contain">
+        <span class="text-white uppercase text-lg font-bold pl-4">Always On Fire</span>
+    </div>
+    <!-- Menu Options (hidden by default on small screens, visible on medium and up) -->
+    <div id="menu" class="md:flex flex-col md:flex-row items-center">
+        <a href="#about" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">About</a>
+        <a href="#members" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">Members</a>
+        <a href="#media" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">Meedia</a>
+    </div>
 </div>
-
 
 <!-- Content to show scrolling effect -->
 <section class="relative bg-gray-900 flex justify-center items-center overflow-hidden">
@@ -40,7 +45,7 @@
 
 <!-- New Section with Adjustments -->
 <section class="bg-gray-200 text-gray-800 py-12">
-    <div class="container mx-auto px-4 max-w-[1200px]">
+    <div id="about" class="container mx-auto px-4 max-w-[1200px]">
         <p class="text-lg mx-auto text-left leading-relaxed pb-4">
             From the iconic riffs of Queen to the rebellious beats of Muse, from the unmistakable groove of ZZ Top to the soulful melodies of Joe Walsh - "Always on Fire" is your musical time machine to classic rock's golden age.
         </p>
@@ -57,7 +62,7 @@
 </section>
 
 <section class="bg-white py-12">
-    <div class="container mx-auto px-4">
+    <div id="members" class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Members</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 justify-center">
             <div class="flex flex-col">
@@ -90,7 +95,7 @@
 
 <!-- Media Section -->
 <section class="bg-gray-200 text-gray-800 py-12">
-    <div class="container mx-auto px-4">
+    <div id="media" class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Media</h2>
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 justify-center">
             <div class="flex flex-col items-center justify-center">
@@ -118,5 +123,20 @@
     </div>
 </section>
 
+<script>
+  document.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const href = this.getAttribute('href'); // Get the href attribute
+      const offsetTop = document.querySelector(href).offsetTop; // Get the top offset of the target
+
+      // Scroll to the target element smoothly
+      window.scroll({
+        top: offsetTop - 60, // Consider any fixed header offset if necessary
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
 </body>
 </html>
