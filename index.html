@@ -6,6 +6,9 @@
     <title>Always On Fire</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io-2/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io-2/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io-2/favicon-16x16.png">
@@ -19,18 +22,34 @@
 <body>
 
 <!-- Fixed Top Bar -->
-<div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center justify-between px-4">
+<section class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center justify-between px-4">
     <div class="flex items-center">
         <img src="assets/images/aof-logo.png" alt="Band Logo" class="h-12 object-contain">
         <span class="text-white uppercase text-lg font-bold pl-4">Always On Fire</span>
     </div>
     <!-- Menu Options (hidden by default on small screens, visible on medium and up) -->
-    <div id="menu" class="md:flex flex-col md:flex-row items-center">
-        <a href="#about" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">About</a>
-        <a href="#members" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">Members</a>
-        <a href="#media" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">Media</a>
-    </div>
-</div>
+    <nav class="bg-black md:flex flex-col md:flex-row items-center">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto text-white">
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-700" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-8 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black rounded-lg">
+                    <li>
+                        <a href="#about" class="menu-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-gray-700 md:p-0">About</a>
+                    </li>
+                    <li>
+                        <a href="#members" class="menu-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-gray-700 md:p-0">Members</a>
+                    </li>
+                    <li>
+                        <a href="#media" class="menu-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-gray-700 md:p-0">Media</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
 
 <!-- Content to show scrolling effect -->
 <section class="relative bg-gray-900 flex justify-center items-center overflow-hidden">
@@ -137,6 +156,20 @@
       window.scroll({
         top: offsetTop - 60, // Consider any fixed header offset if necessary
         behavior: "smooth"
+      });
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbarToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const navLinks = document.querySelectorAll('#navbar-default .menu-link');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        const expanded = navbarToggle.getAttribute('aria-expanded') === 'true' || false;
+        if (expanded) {
+          navbarToggle.click(); // Trigger the button click to collapse the navbar
+        }
       });
     });
   });
