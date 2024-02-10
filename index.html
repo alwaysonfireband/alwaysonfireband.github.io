@@ -3,25 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 Always On Fire</title>
+    <title>Always On Fire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon_io-2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io-2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon_io-2/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+      body {
+          font-family: 'Manrope', sans-serif;
+      }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body>
 
 <!-- Fixed Top Bar -->
-<div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center">
-   <img src="assets/images/aof-logo.png" alt="Band Logo" class="h-12 pl-8 object-contain">
-   <span class="text-white uppercase pl-4 text-lg font-bold">Always On Fire</span>
+<div class="fixed top-0 left-0 w-full h-14 bg-black z-50 flex items-center justify-between px-4">
+    <div class="flex items-center">
+        <img src="assets/images/aof-logo.png" alt="Band Logo" class="h-12 object-contain">
+        <span class="text-white uppercase text-lg font-bold pl-4">Always On Fire</span>
+    </div>
+    <!-- Menu Options (hidden by default on small screens, visible on medium and up) -->
+    <div id="menu" class="md:flex flex-col md:flex-row items-center">
+        <a href="#about" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">About</a>
+        <a href="#members" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">Members</a>
+        <a href="#media" class="menu-link text-white uppercase text-sm font-semibold px-4 py-2 hover:bg-gray-700 rounded">Meedia</a>
+    </div>
 </div>
 
 <!-- Content to show scrolling effect -->
-<section class="bg-cover bg-center h-screen bg-gray-800" style="background-image: url('assets/images/aof-band-wide.jpg');">
-    <div class="bg-black bg-opacity-50 flex flex-col justify-center items-center h-full">
-        <h1 class="text-6xl font-bold mb-4 text-white">Always On Fire</h1>
-        <p class="text-xl text-white">Website coming soon!</p>
+<section class="relative bg-gray-900 flex justify-center items-center overflow-hidden">
+    <img src="assets/images/aof-band-wide.jpg" alt="Band Image" class="max-w-full mx-auto">
+    <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+
+    <div class="z-10 text-center absolute bottom-10">
+        <h1 class="hidden md:block text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-4 text-white">Always On Fire</h1>
+        <p class="text-xl text-white">Your musical journey through the ages</p>
+    </div>
+</section>
+
+<!-- New Section with Adjustments -->
+<section class="bg-gray-200 text-gray-800 py-12">
+    <div id="about" class="container mx-auto px-4 max-w-[1200px]">
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            From the iconic riffs of Queen to the rebellious beats of Muse, from the unmistakable groove of ZZ Top to the soulful melodies of Joe Walsh - "Always on Fire" is your musical time machine to classic rock's golden age.
+        </p>
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            Consisting of five passionate musicians from Chicago, IL, our ensemble brings together a symphony of sounds, echoing the sentiments of yesteryears while infusing our unique touch. We are not just a band; we're a bridge that connects generations of rock enthusiasts.<br>
+        </p>
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            With each performance, we aim to capture the essence of classic rock, transporting audiences to a time where music wasn't just heard; it was felt. Our sets promise not only a trip down memory lane but a live experience that resonates with both seasoned classic rock aficionados and new fans alike.
+        </p>
+        <p class="text-lg mx-auto text-left leading-relaxed pb-4">
+            Join us on this sonic journey, as we pay homage to legends of rock, celebrating their legacy with every chord and chorus.
+        </p>
+    </div>
+</section>
+
+<section class="bg-white py-12">
+    <div id="members" class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Members</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 justify-center">
+            <div class="flex flex-col">
+                <img src="assets/images/band/tony-profile.jpg" alt="Tony" class="mx-auto mb-4 rounded-lg">
+                <p class="text-lg font-semibold text-gray-800 text-center">Tony Falco</p>
+            </div>
+            <div class="flex flex-col">
+                <img src="assets/images/band/fox-profile.jpg" alt="Fox" class="mx-auto mb-4 rounded-lg">
+                <p class="text-lg font-semibold text-gray-800 text-center">Fox Hobart</p>
+            </div>
+            <div class="flex flex-col">
+                <img src="assets/images/band/marcel-profile.jpg" alt="Marcel" class="mx-auto mb-4 rounded-lg">
+                <p class="text-lg font-semibold text-gray-800 text-center">Marcel Vinesar</p>
+            </div>
+            <div class="flex flex-col">
+                <img src="assets/images/band/csaba-profile.jpg" alt="Csaba" class="mx-auto mb-4 rounded-lg">
+                <p class="text-lg font-semibold text-gray-800 text-center">Csaba Paltan</p>
+            </div>
+            <div class="flex flex-col">
+                <img src="assets/images/band/attila-profile.jpg" alt="Attila" class="mx-auto mb-4 rounded-lg">
+                <p class="text-lg font-semibold text-gray-800 text-center">Attila Domokos</p>
+            </div>
+            <div class="flex flex-col">
+                <img src="assets/images/band/band-profile.jpg" alt="Band" class="mx-auto mb-4 rounded-lg">
+                <p class="text-lg font-semibold text-gray-800 text-center">The Band</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Media Section -->
+<section class="bg-gray-200 text-gray-800 py-12">
+    <div id="media" class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Media</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 justify-center">
+            <div class="flex flex-col items-center justify-center">
+                <p class="text-lg font-semibold text-gray-800 text-center pb-5">Doctor Doctor (UFO)</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EDPYaMAV7n0?si=bvpp9Rk2WY1cHl8y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <p class="text-lg font-semibold text-gray-800 text-center pb-5">Whatever You Want (Status Quo)</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/baYWi4k_xVk?si=UtyT_nNM4OLWTtP9&amp;clip=Ugkx1C0w2pA1pKFTfKw9AqNK_vsi_y8u7vYD&amp;clipt=EOj4BBjIzQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </section>
 
 
+<!-- Bottom section -->
+<section class="bg-gray-900 text-gray-800 py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center"> <!-- Flex container with vertical alignment -->
+         <a href="https://www.facebook.com/AlwaysOnFireBand/" target="_blank" rel="noopener noreferrer">
+             <img src="assets/images/fb-logo-primary.png" alt="Facebook" class="h-8">
+         </a>
+         <p class="text-l text-white mt-2">For booking and inquiries, please email: <a href="mailto:info@alwaysonfire.band" target="_blank" class="underline hover:underline-offset-4">info@alwaysonfire.band</a></p>
+      </div>
+    </div>
+</section>
+
+<script>
+  document.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const href = this.getAttribute('href'); // Get the href attribute
+      const offsetTop = document.querySelector(href).offsetTop; // Get the top offset of the target
+
+      // Scroll to the target element smoothly
+      window.scroll({
+        top: offsetTop - 60, // Consider any fixed header offset if necessary
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
 </body>
 </html>
