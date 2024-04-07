@@ -1,4 +1,6 @@
 module.exports = {
-  content: ['public/index.html'],
-  css: ['public/build/main.css']
-}
+  content: ['public/**/*.html'],
+  css: ['public/build/main.css'],
+  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+  output: 'public/build/purged.css',
+};
