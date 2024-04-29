@@ -9,6 +9,7 @@
     "tailwind-minify": "npx tailwindcss -i css/main.css -o public/build/main.css --minify",
     "purge": "purgecss --config ./purgecss.config.js -o public/build/main.css",
     "release-build": "npm run tailwind-minify && npm run purge",
+    "release": "rm -f ../index.html && rm -fr ../build && rm -fr ../assets && cp -r public/ ../",
     "live-server": "live-server public"
   },
   "keywords": [],
