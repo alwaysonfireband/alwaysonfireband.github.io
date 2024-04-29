@@ -8,7 +8,8 @@
     "watch": "postcss css/main.css -o public/build/main.css --watch",
     "tailwind-minify": "npx tailwindcss -i css/main.css -o public/build/main.css --minify",
     "purge": "purgecss --config ./purgecss.config.js -o public/build/main.css",
-    "release-build": "npm run tailwind-minify && npm run purge"
+    "release-build": "npm run tailwind-minify && npm run purge",
+    "live-server": "live-server public"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "postcss-cli": "^11.0.0",
     "purgecss": "^6.0.0",
     "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "live-server": "^1.1.0"
   }
 }
